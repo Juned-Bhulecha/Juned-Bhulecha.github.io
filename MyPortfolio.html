@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juned K. Bhulecha | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Letter-by-letter fade+up */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animated-letter {
+      display: inline-block;
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    /* Section reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(28px); transition: all 0.9s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    /* Fix content under fixed header */
+    .page-top { padding-top: 84px; }
+  </style>
+</head>
+<body class="bg-gray-950 text-white">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#home" class="text-xl font-bold tracking-tight">
+          Juned <span class="text-cyan-400">Bhulecha</span>
+        </a>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Toggle Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <ul id="nav" class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+          <li><a class="hover:text-cyan-400" href="#home">Home</a></li>
+          <li><a class="hover:text-cyan-400" href="#about">About</a></li>
+          <li><a class="hover:text-cyan-400" href="#education">Education</a></li>
+          <li><a class="hover:text-cyan-400" href="#skills">Skills</a></li>
+          <li><a class="hover:text-cyan-400" href="#projects">Projects</a></li>
+          <li><a class="hover:text-cyan-400" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Mobile menu -->
+      <ul id="mobileNav" class="md:hidden hidden pb-4 space-y-3 text-gray-300">
+        <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="#home">Home</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="#about">About</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="#education">Education</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="#skills">Skills</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="#projects">Projects</a></li>
+        <li><a class="block px-2 py-2 rounded hover:bg-white/10" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-top">
+
+    <!-- Hero -->
+    <section id="home" class="min-h-[85vh] flex items-center">
+      <div class="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-3" data-animate="heading">
+            Hello, I'm Juned
+          </h1>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-3" data-animate="heading1">
+            Bhulecha.
+          </h1>
+          <p class="text-base md:text-xl text-gray-300 mb-8" data-animate="subheading">
+            Frontend Developer • Graphics Designer
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-semibold transition">
+              View Projects
+            </a>
+            <a href="JK Resume.pdf" target="_blank" download class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/10 transition">
+              Download CV
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <!-- subtle gradient blob -->
+          <div class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-cyan-500/20 via-fuchsia-500/10 to-indigo-500/20 blur-2xl"></div>
+          <div class="relative bg-gray-900/60 border border-white/10 rounded-3xl p-8 backdrop-blur">
+            <p class="text-gray-300">
+              <i>I’m Juned Bhulecha – a passionate Frontend Developer & Graphics Designer, turning ideas into creative and user-friendly digital experiences.</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- About Section -->
+<section id="about" class="about">
+  <div class="about-container">
+    
+    <!-- Left Side - Photo -->
+    <div class="about-photo">
+      <img src="juned.jpg" alt="Juned Raza">
+    </div>
+
+    <!-- Right Side - Content -->
+    <div class="about-content">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6" data-animate="about-heading">About Me</h2>
+      <p>
+        I am <b>Juned K. Bhulecha</b>, a passionate 
+        <span class="highlight">Frontend Developer</span> and 
+        <span class="highlight">Graphics Designer</span>.
+        I specialize in building responsive, user-friendly websites and creating modern digital designs that blend creativity with functionality.  
+        Currently pursuing Master of Computer Applications (MCA), I enjoy building modern websites 
+        and creative designs. I am motivated to continuously learn, improve, and contribute to impactful projects that deliver value and innovation.
+        Skilled in <b>Python, Java, JavaScript, PHP, .NET, Photoshop, Illustrator Ext</b>.
+      </p>
+      <p>
+        I have worked on projects like a 
+        <b>Watch Shop E-commerce Website</b> and an 
+        <b>Online Library Management System</b>.  
+        I’m always excited to learn and solve real-world problems.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* About Section */
+.about {
+  padding: 80px 10%;
+  background: #030c237b; /* dark background */
+  color: #f8fafc;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-photo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.6);
+  border: 4px solid #1e293b;
+
+  /* Animation */
+  transform: scale(0.9);
+  opacity: 0;
+  animation: fadeInScale 1.2s ease forwards;
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* cyan */
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #facc15; /* yellow */
+  font-weight: 600;
+}
+</style>
+
+
+
+    <!-- Education -->
+    <section id="education" class="py-20 bg-gray-900/40 border-y border-white/5">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10" data-animate="education-heading">Education</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="reveal rounded-2xl border border-white/10 bg-gray-900/50 p-6">
+            <h3 class="text-xl font-semibold">MCA (2024–2026)</h3>
+            <p class="text-gray-400">Sardar Patel University</p>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 bg-gray-900/50 p-6">
+            <h3 class="text-xl font-semibold">BCA (2022–2024)</h3>
+            <p class="text-gray-400">Sardar Patel University</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10" data-animate="skills-heading">Skills</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="reveal p-6 rounded-2xl border border-white/10 bg-gray-900/50">
+            <h4 class="font-semibold mb-2">Frontend</h4>
+            <p class="text-gray-400">HTML, CSS, JavaScript, React, Responsive UI</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-white/10 bg-gray-900/50">
+            <h4 class="font-semibold mb-2">Backend</h4>
+            <p class="text-gray-400">PHP, .NET (C#), Flask, Java</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-white/10 bg-gray-900/50">
+            <h4 class="font-semibold mb-2">Database</h4>
+            <p class="text-gray-400">MySQL, SQL Server</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-white/10 bg-gray-900/50">
+            <h4 class="font-semibold mb-2">Design</h4>
+            <p class="text-gray-400">Photoshop, Illustrator, Figma (UI/UX)</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-white/10 bg-gray-900/50">
+            <h4 class="font-semibold mb-2">Collab & Mgmt</h4>
+            <p class="text-gray-400">Git/GitHub, Project Planning, Communication</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-white/10 bg-gray-900/50">
+            <h4 class="font-semibold mb-2">Problem-Solving</h4>
+            <p class="text-gray-400">Clean code, debugging, optimization</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (ONLY 2) -->
+    <section id="projects" class="py-20 bg-gray-900/40 border-y border-white/5">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10" data-animate="projects-heading">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <!-- Watch Shop -->
+          <article class="reveal group rounded-2xl border border-white/10 bg-gray-900/60 overflow-hidden">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Watch Shop</h3>
+              <p class="text-gray-300 mb-4">
+                E-commerce website to browse and purchase watches. Built with <b>.NET (C#)</b> and SQL Server,
+                including product catalog, cart & secure checkout.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/10">.NET</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/10">C#</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/10">SQL Server</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/Juned-Bhulecha/WatchShop" target="_blank" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-semibold transition">View Project</a>
+                <a href="https://github.com/Juned-Bhulecha" target="_blank" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Library Management -->
+          <article class="reveal group rounded-2xl border border-white/10 bg-gray-900/60 overflow-hidden">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Library Management System</h3>
+              <p class="text-gray-300 mb-4">
+                Web app to manage books, members, and issue/return workflows. Built with <b>PHP & MySQL</b>,
+                role-based access and searchable records.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/10">PHP</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/10">MySQL</span>
+                <span class="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/10">HTML/CSS</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/Juned-Bhulecha" target="_blank" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-semibold transition">View Project</a>
+                <a href="https://github.com/Juned-Bhulecha" target="_blank" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Contact -->
+    <section id="contact" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-animate="contact-heading">Get in Touch</h2>
+        <p class="text-gray-300 mb-6 reveal">Have a project or idea? I’d love to hear about it.</p>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<!-- Social Media Icons -->
+<div class="social-icons">
+  <a href="mailto:bhulechajuned786@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Gmail</a>
+  <a href="https://github.com/Juned-Bhulecha" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  <a href="https://www.linkedin.com/in/junedbhulecha/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+  <a href="https://www.instagram.com/_j.k013/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+</div>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  background: #00bcd4;     /* same cyan color */
+  color: #111;             /* text/icon black */
+  font-size: 16px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;     /* same roundness */
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-icons a i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  background: #fff;
+  color: #00bcd4;
+  border: 2px solid #00bcd4;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+</style>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-white/5 py-6 text-center text-gray-400">
+    © 2025 Juned K. Bhulecha. All rights reserved.
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+      });
+    }
+
+    // Letter-by-letter animation
+    function animateText(selector, initialDelay) {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const text = el.textContent.trim();
+      const chars = text.split('');
+      el.textContent = '';
+      chars.forEach((ch, i) => {
+        const span = document.createElement('span');
+        span.className = 'animated-letter';
+        span.innerHTML = ch === ' ' ? '&nbsp;' : ch;
+        span.style.animationDelay = (initialDelay + i * 50) + 'ms';
+        el.appendChild(span);
+      });
+    }
+
+    // Reveal on scroll (sections & cards)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Run animations after load
+    window.addEventListener('load', () => {
+      animateText('[data-animate="heading"]', 200);
+      animateText('[data-animate="heading1"]', 200);
+      const headLen = (document.querySelector('[data-animate="heading"]')?.textContent.trim().length || 0);
+      animateText('[data-animate="subheading"]', 200 + headLen * 50);
+
+      animateText('[data-animate="about-heading"]', 1200);
+      animateText('[data-animate="education-heading"]', 1500);
+      animateText('[data-animate="skills-heading"]', 1800);
+      animateText('[data-animate="projects-heading"]', 2100);
+      animateText('[data-animate="contact-heading"]', 2400);
+    });
+  </script>
+</body>
+</html>
+
+
