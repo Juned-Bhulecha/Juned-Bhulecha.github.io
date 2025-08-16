@@ -1,11 +1,121 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=MyPortfolio.html">
-  </head>
-  <body>
-    <p>If you are not redirected automatically, follow this <a href="MyPortfolio.html">link to my portfolio</a>.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Juned Bhulecha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Scrollbars ko hide karein */
+        }
+
+        /* Main preloader container */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Dark Navy Blue Background */
+            background-color: #0a192f; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease; /* Fade-out effect */
+            z-index: 9999;
+        }
+
+        /* Jab portfolio load hoga to is class se preloader hide hoga */
+        body.loaded #preloader {
+            opacity: 0;
+            pointer-events: none; /* Preloader par click na ho */
+        }
+        
+        /* Rings ka main container */
+        .ring-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Sabhi rings ke liye common style */
+        .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        /* Naye color combination ke saath rings */
+        .ring-1 {
+            width: 150px;
+            height: 150px;
+            border-top-color: #64ffda; /* Bright Teal */
+            animation: rotate-cw 4s; /* Clockwise rotation */
+        }
+        
+        .ring-2 {
+            width: 130px;
+            height: 130px;
+            border-right-color: #ccd6f6; /* Light Slate Grey */
+            animation: rotate-ccw 3.5s; /* Counter-clockwise rotation */
+        }
+
+        .ring-3 {
+            width: 110px;
+            height: 110px;
+            border-left-color: #8892b0; /* Dark Slate Grey */
+            animation: rotate-cw 3s;
+        }
+        
+        .ring-4 {
+            width: 90px;
+            height: 90px;
+            border-bottom-color: #64ffda; /* Bright Teal */
+            animation: rotate-ccw 2.5s;
+        }
+        
+        /* Clockwise rotation animation */
+        @keyframes rotate-cw {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Counter-clockwise rotation animation */
+        @keyframes rotate-ccw {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="preloader">
+        <div class="ring-container">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+            <div class="ring ring-4"></div>
+        </div>
+    </div>
+
+    <script>
+        // 3.5 seconds tak animation dikhayein
+        setTimeout(function() {
+            // Body mein 'loaded' class add karein
+            document.body.classList.add('loaded');
+            
+            // Fade-out animation ke baad redirect karein
+            setTimeout(function() {
+                window.location.href = 'MyPortfolio.html';
+            }, 800); // Yeh time CSS ke transition time se match hona chahiye
+        }, 3500); 
+    </script>
+</body>
 </html>
